@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voluntrix - Volunteer Opportunity Finder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+</head>
+<body>
+    
+      
+    <div class="container">
+        
+          
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="title-wrapper">
+                    <h1 class="title">
+                        <span class="gradient-text">Volunteer Opportunity Finder</span>
+                        <span class="emoji">🤖</span>
+                    </h1>
+                    <p class="subtitle">
+                        Discover meaningful volunteer opportunities based on your skills, location, and interests.
+                        Get personalized suggestions and receive  or download as PDF!
+                    </p>
+                </div>
+                <button class="dev-button">
+                    <span>Rohit Singh(12315972)</span>
+                    
+                </button>
+                <button class="dev-button">
+                    <span>Rishabh(12314783)</span>
+                    
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="content-grid">
+            <!-- Form Section -->
+            <div class="form-section glass-effect">
+                <h2 class="section-title">Tell Us About Yourself</h2>
+                <form id="volunteerForm" class="volunteer-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" id="name" placeholder="Enter your full name" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location" class="form-label">Preferred Location</label>
+                        <input type="text" id="location" placeholder="Enter your preferred location" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="skills" class="form-label">Your Skills</label>
+                        <textarea id="skills" rows="3" placeholder="(e.g., planting, animal feeding...)" class="form-textarea"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="interests" class="form-label">Causes You Care About</label>
+                        <textarea id="interests" rows="3" placeholder="(e.g., planting trees, deforestation...)" class="form-textarea"></textarea>
+                    </div>
+                    
+                    
+                    <button type="submit" id="submitBtn" class="submit-btn">
+                        <span id="submitText">Find Opportunities</span>
+                        <svg id="submitSpinner" class="spinner hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Results Section -->
+            <div id="resultsSection" class="results-section glass-effect hidden">
+                <div class="results-header">
+                    <h2 class="section-title">
+                        <span class="gradient-text">Your Opportunities</span>
+                        <span class="emoji">🌟</span>
+                    </h2>
+                    <span id="userNameBadge" class="user-badge"></span>
+                </div>
+                
+                <div id="opportunitiesList" class="opportunities-list">
+                    <!-- Opportunities will be inserted here -->
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="downloadPdfBtn" class="action-btn secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Download PDF
+                    </button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
