@@ -3,7 +3,7 @@ const CONFIG = {
     GEMINI_API_KEY: "AIzaSyDkPjKP6JUE-R1AqsfxzBXwNGs5a0sJZ9w",
 };
 
-// DOM Elements
+
 const dom = {
     form: document.getElementById('volunteerForm'),
     submitBtn: document.getElementById('submitBtn'),
